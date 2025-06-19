@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="brand photography, product photoshoots, lifestyle photography, Digitolla" />
+  <meta name="description" content="Digitolla provides brand-focused imagery that speaks louder than words, perfect for digital, print, and more." />
+  <meta name="author" content="Digitolla" />
+
+  <title>Digitolla - Brand Photography</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="servicescss.css">
+
+  <!-- Internal CSS for Responsive Portfolio Slider -->
+  <style>
+    .slider {
+      max-width: 80%;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      scroll-behavior: smooth;
+    }
+
+    .slider-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+      padding: 15px;
+    }
+
+    .slide img {
+      width: 60%;
+      max-height: 75vh;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @media (hover: hover) {
+      .slide img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .slider {
+        max-width: 90%;
+      }
+      .slide img {
+        max-height: 50vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slider {
+        max-width: 95%;
+      }
+      .slide img {
+        max-height: 45vh;
+      }
+      .slide {
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slider {
+        max-width: 100%;
+      }
+      .slide img {
+        max-height: 35vh;
+        border-radius: 8px;
+      }
+      .slide {
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span style="color: #1b513b;">
+              <img src="logoo.png" alt="" style="height: 104px;width: 117px;">
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="service.html">Services <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="quote_btn-container">
+              <a href="">
+                <span style="color: #1b513b;">
+                  Call: +91 60064 95703
+                </span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Photos jo sirf dikhein nahi, feel bhi ho.</h1>
+      <p>Brand-focused imagery that speaks louder than words—perfect for digital, print, and everything in between.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+      <h2>Our Work</h2>
+      <div class="slider">
+        <div class="slider-container">
+          <div class="slide">
+            <img
+              src="brp/IMG_1621 (1).PNG"
+              alt="Brand Photography 1" loading="lazy">
+          </div>
+          <div class="slide">
+            <img
+              src="brp/IMG_1622 (2).PNG"
+              alt="Brand Photography 2" loading="lazy">
+          </div>
+          <div class="slide">
+            <img
+              src="brp/IMG_1623 (1).PNG"
+              alt="Brand Photography 3" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <h2>What We Offer</h2>
+      <ul>
+        <li style="--i: 1;">Product Photoshoots</li>
+        <li style="--i: 2;">Lifestyle & Branding Shoots</li>
+        <li style="--i: 3;">Social Media Image Kits</li>
+        <li style="--i: 4;">Portrait & Profile Photos</li>
+        <li style="--i: 5;">Flat Lay & Aesthetic Shots</li>
+        <li style="--i: 6;">Creative Direction & Moodboards</li>
+        <li style="--i: 7;">Location Shoots</li>
+        <li style="--i: 8;">Campaign Photography</li>
+        <li style="--i: 9;">High-Res Edited + Raw Files</li>
+      </ul>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+      <h2>Why Choose Digitolla?</h2>
+      <p>We craft visuals that build identity and connect emotionally with your audience.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <a href="#" class="cta-button">Book a Photoshoot</a>
+      <p>Email us at: <a href="/cdn-cgi/l/email-protection#be9f9a939790be9a9799978a9192929fd09d9193"><span class="__cf_email__" data-cfemail="f69590899d9ab6929f919f8299989895da979b99">[email&#160;protected]</span></a></p>
+    </section>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9360062789536fbc',t:'MTc0NTYwNzAwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

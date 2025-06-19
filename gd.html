@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="event coverage, professional photography, cinematic videography, Digitolla" />
+  <meta name="description" content="Digitolla captures your events with cinematic finesse, high-res photography, and social-ready reels." />
+  <meta name="author" content="Digitolla" />
+
+  <title>Digitolla - Event Coverage</title>
+
+  <!-- Owl Carousel stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- Fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .hero_area {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Section */
+    .header_section {
+      background: #333;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container-fluid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .custom_nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-brand span {
+      display: block;
+      animation: fadeIn 1s ease;
+    }
+
+    .navbar-brand img {
+      height: 80px;
+      width: 90px;
+    }
+
+    .navbar-toggler {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .navbar-toggler span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+
+    .collapse.navbar-collapse {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+
+    .collapse.navbar-collapse.show {
+      display: flex;
+    }
+
+    .d-flex {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 0;
+    }
+
+    .navbar-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .nav-item {
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+      animation-delay: calc(0.1s * var(--i, 1));
+    }
+
+    .nav-item .nav-link {
+      color: #fff;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+    .nav-item .nav-link:hover {
+      text-decoration: underline;
+      color: #ffeb3b;
+    }
+
+    .quote_btn-container a {
+      color: #fff;
+      font-size: 0.9rem;
+      text-decoration: none;
+      animation: fadeIn 1s ease;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f4f4f4;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #046307;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.8s ease forwards;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.8s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #fff;
+    }
+
+    .portfolio h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #046307;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .slider {
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      position: relative;
+    }
+
+    .owl-carousel .slide {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .owl-carousel .slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      max-height: 200px;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .owl-carousel .slide:hover img {
+      transform: scale(1.1);
+    }
+
+    .owl-carousel .owl-item .slide {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 0.5s ease forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .owl-carousel .slide::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(4, 99, 7, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .owl-carousel .slide:hover::after {
+      opacity: 1;
+    }
+
+    /* Services (What We Offer) Section */
+    .services {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, #046307 0%, #1a3c1e 100%);
+    }
+
+    .services h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffeb3b;
+      margin-bottom: 2rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      animation: pulseGlow 1s ease forwards;
+    }
+
+    .services ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .services li {
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      padding: 1rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #046307;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(255, 235, 59, 0.2);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: bounceUpDown 2s ease-in-out infinite;
+      animation-delay: calc(var(--i) * 0.2s);
+    }
+
+    .services li:hover,
+    .services li:active {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 235, 59, 0.8);
+      border: 2px solid #ffeb3b;
+      z-index: 1;
+    }
+
+    .services li::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 235, 59, 0.4), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .services li:hover::before,
+    .services li:active::before {
+      left: 100%;
+    }
+
+    @keyframes bounceUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        opacity: 0;
+        text-shadow: 0 0 0 rgba(255, 235, 59, 0);
+      }
+      100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+      }
+    }
+
+    /* Why Choose Section */
+    .why-choose {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #fff;
+    }
+
+    .why-choose h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #046307;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: scaleIn 0.8s ease forwards;
+    }
+
+    .why-choose p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: scaleIn 0.8s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #f4f4f4;
+    }
+
+    .contact .cta-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #046307;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      animation: pulse 2s infinite;
+    }
+
+    .contact .cta-button:hover {
+      background: #ffeb3b;
+      color: #046307;
+    }
+
+    .contact p {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .contact a {
+      color: #046307;
+      text-decoration: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (min-width: 481px) {
+      .header_section {
+        padding: 1rem;
+      }
+
+      .navbar-brand img {
+        height: 104px;
+        width: 117px;
+      }
+
+      .collapse.navbar-collapse {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .d-flex {
+        flex-direction: row;
+        gap: 1rem;
+      }
+
+      .navbar-nav {
+        flex-direction: row;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .portfolio h2 {
+        font-size: 1.8rem;
+      }
+
+      .owl-carousel .slide img {
+        max-height: 250px;
+      }
+
+      .services ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services h2 {
+        font-size: 2rem;
+      }
+
+      .why-choose h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .portfolio h2 {
+        font-size: 2rem;
+      }
+
+      .owl-carousel .slide img {
+        max-height: 300px;
+      }
+
+      .services ul {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .services h2 {
+        font-size: 2.2rem;
+      }
+
+      .why-choose h2 {
+        font-size: 2rem;
+      }
+
+      .contact .cta-button {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .portfolio h2 {
+        font-size: 1.5rem;
+      }
+
+      .owl-carousel .slide img {
+        max-height: 150px;
+      }
+
+      .services h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.2rem;
+      }
+
+      .nav-item .nav-link {
+        font-size: 1rem;
+      }
+
+      .portfolio {
+        padding: 1rem;
+      }
+
+      .owl-carousel .slide img {
+        max-height: 120px;
+      }
+
+      .services ul {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- Header Section -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span style="color: #046307;">
+              <img src="logoo.png" alt="Digitolla Logo" style="height: 80px; width: 90px;">
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" onclick="toggleNav()">
+            <span class="s-1"></span>
+            <span class="s-2"></span>
+            <span class="s-3"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item" style="--i: 1;">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item" style="--i: 2;">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item active" style="--i: 3;">
+                  <a class="nav-link" href="service.html">Services <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active" style="--i: 3;">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="quote_btn-container">
+              <a href="tel:+011234567890">
+                <span style="color: #fff;">
+                  Call: +91 60064 95703
+                </span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Aap enjoy karo moment, hum sambhalte hain yaadein.</h1>
+      <p>Capture your event with cinematic finesse, high-res photography, and social-ready reels.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+      <h2>Our Work</h2>
+      <div class="slider">
+        <div class="slider-container owl-carousel owl-theme">
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Event Coverage 1" loading="lazy">
+          </div>
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Event Coverage 2" loading="lazy">
+          </div>
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Event Coverage 3" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <h2>What We Offer</h2>
+      <ul>
+        <li style="--i: 1;">Professional Photography</li>
+        <li style="--i: 2;">Cinematic Videography</li>
+        <li style="--i: 3;">Reels + Social Edits</li>
+        <li style="--i: 4;">Candid & Behind-the-Scenes</li>
+        <li style="--i: 5;">Video Editing</li>
+        <li style="--i: 6;">Testimonials + Interviews</li>
+        <li style="--i: 7;">Event Branding Assets</li>
+      </ul>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+      <h2>Why Choose Digitolla?</h2>
+      <p>We capture more than visuals—we preserve the energy, emotion, and essence.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <a href="#" class="cta-button">Book Your Event Coverage</a>
+      <p>Email us at: <a href="mailto:admin@digitolla.com">admin@digitolla.com</a></p>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    // Toggle Navigation for Mobile
+    function toggleNav() {
+      const nav = document.getElementById('navbarSupportedContent');
+      nav.classList.toggle('show');
+    }
+
+    // Initialize Owl Carousel for Our Work
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          481: {
+            items: 2
+          },
+          769: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

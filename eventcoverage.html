@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="event coverage, professional photography, cinematic videography, Digitolla" />
+  <meta name="description" content="Digitolla captures your events with cinematic finesse, high-res photography, and social-ready reels." />
+  <meta name="author" content="Digitolla" />
+  <title>Digitolla - Event Coverage</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #F0EAD6;
+      color: #2A2A2A;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #1b513b 0%, #1A3C34 50%, #F0EAD6 100%);
+      color: #F0EAD6;
+      position: relative;
+      overflow: hidden;
+      background-attachment: fixed;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 25px;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(to right, #F0EAD6, #D4A017);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      animation: fadeIn 1.8s ease-out forwards;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0;
+      animation: fadeIn 1.8s ease-out forwards 0.4s;
+    }
+
+    .portfolio {
+      padding: 70px 20px;
+      background: #1b513b;
+      text-align: center;
+    }
+
+    .portfolio h2 {
+      font-size: 2.7rem;
+      color: #F0EAD6;
+      margin-bottom: 50px;
+      background: linear-gradient(to right, #F0EAD6, #D4A017);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .slider {
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider-container {
+      display: flex;
+      width: calc(100% * 7);
+      animation: slide 21s infinite ease-in-out;
+    }
+
+    .slide {
+      width: calc(100% / 7);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide img {
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+      filter: brightness(0.9);
+    }
+
+    .slide img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      filter: brightness(1);
+    }
+
+    @keyframes slide {
+      0%, 14.29% { transform: translateX(0); }
+      16.67%, 30.95% { transform: translateX(-14.29%); }
+      33.33%, 47.62% { transform: translateX(-28.58%); }
+      50%, 64.29% { transform: translateX(-42.87%); }
+      66.67%, 80.95% { transform: translateX(-57.16%); }
+      83.33%, 97.62% { transform: translateX(-71.45%); }
+      100% { transform: translateX(-85.74%); }
+    }
+
+    .services {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #F0EAD6;
+    }
+
+    .services h2 {
+      font-size: 2.7rem;
+      color: #1b513b;
+      text-align: center;
+      margin-bottom: 50px;
+      background: linear-gradient(to right, #1b513b, #D4A017);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .services ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .services li {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 1.2rem;
+      color: #2A2A2A;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: wave 2s infinite ease-in-out;
+      animation-delay: calc(0.2s * var(--i));
+    }
+
+    .services li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .why-choose {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: linear-gradient(to bottom, #F0EAD6, #E8E0C2);
+      text-align: center;
+    }
+
+    .why-choose h2 {
+      font-size: 2.7rem;
+      color: #1b513b;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, #1b513b, #D4A017);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .why-choose p {
+      font-size: 1.3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #2A2A2A;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards 0.3s;
+    }
+
+    .contact {
+      padding: 70px 20px;
+      text-align: center;
+      background: #1b513b;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 20px 40px;
+      background: #D4A017;
+      color: #F0EAD6;
+      text-decoration: none;
+      border-radius: 10px;
+      margin: 25px auto;
+      font-size: 1.3rem;
+      font-weight: 600;
+      transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    .cta-button:hover {
+      background: #B88B14;
+      transform: scale(1.08);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .contact p {
+      font-size: 1.3rem;
+      color: #F0EAD6;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards 0.3s;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #F0EAD6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 1024px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.2rem; }
+      .portfolio h2, .services h2, .why-choose h2 { font-size: 2.2rem; }
+      .slide img { max-width: 450px; aspect-ratio: 3 / 2; }
+      .services li { font-size: 1.1rem; padding: 20px; }
+      .slider-container { width: calc(100% * 7); }
+      .slide { width: calc(100% / 7); }
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 80px 15px; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .portfolio h2, .services h2, .why-choose h2 { font-size: 1.8rem; }
+      .slide img { max-width: 350px; aspect-ratio: 3 / 2; }
+      .services li { font-size: 1rem; }
+      .why-choose p, .contact p { font-size: 1.1rem; }
+      .cta-button { padding: 15px 30px; font-size: 1.1rem; }
+      .slider-container { width: calc(100% * 7); }
+      .slide { width: calc(100% / 7); }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 60px 10px; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 0.9rem; }
+      .portfolio h2, .services h2, .why-choose h2 { font-size: 1.5rem; }
+      .slide img { max-width: 280px; aspect-ratio: 3 / 2; }
+      .services li { padding: 15px; font-size: 0.9rem; }
+      .cta-button { padding: 12px 25px; font-size: 1rem; }
+      .slider-container { width: calc(100% * 7); }
+      .slide { width: calc(100% / 7); }
+      .portfolio { padding: 50px 10px; }
+      .slide { padding: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span style="color: #1b513b;">
+              <img src="logoo.png" alt="Digitolla Logo" style="height: 104px; width: 117px;">
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"></span>
+            <span class="s-2"></span>
+            <span class="s-3"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="service.html">Services <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="quote_btn-container">
+              <a href="">
+                <span style="color: #1b513b;">
+                  Call: +91 60064 95703
+                </span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Aap enjoy karo moment, hum sambhalte hain yaadein.</h1>
+      <p>Capture your event with cinematic finesse, high-res photography, and social-ready reels.</p>
+    </section>
+
+    <section class="portfolio">
+      <h2>Our Work</h2>
+      <div class="slider">
+        <div class="slider-container">
+          <div class="slide">
+            <img src="eventcoverage/1.jpeg" alt="Wedding event photography" loading="lazy">
+          </div>
+          <div class="slide">
+            <img src="eventcoverage/2.jpeg" alt="Corporate event videography" loading="lazy">
+          </div>
+          <div class="slide">
+            <img src="eventcoverage/3.jpeg" alt="Concert event reels" loading="lazy">
+          </div>
+          <div class="slide">
+            <img src="eventcoverage/4.jpeg" alt="Corporate event videography" loading="lazy">
+          </div>
+          <div class="slide">
+            <img src="eventcoverage/5.jpeg" alt="Corporate event videography" loading="lazy">
+          </div>
+          <div class="slide">
+            <img src="eventcoverage/6.jpeg" alt="Corporate event videography" loading="lazy">
+          </div>
+          <div class="slide">
+            <img src="eventcoverage/7.jpeg" alt="Corporate event videography" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <h2>What We Offer</h2>
+      <ul>
+        <li style="--i: 1;">Professional Photography</li>
+        <li style="--i: 2;">Cinematic Videography</li>
+        <li style="--i: 3;">Reels + Social Edits</li>
+        <li style="--i: 4;">Candid & Behind-the-Scenes</li>
+        <li style="--i: 5;">Video Editing</li>
+        <li style="--i: 6;">Testimonials + Interviews</li>
+        <li style="--i: 7;">Event Branding Assets</li>
+      </ul>
+    </section>
+
+    <section class="why-choose">
+      <h2>Why Choose Digitolla?</h2>
+      <p>We capture more than visuals—we preserve the energy, emotion, and essence.</p>
+    </section>
+
+    <section class="contact">
+      <a href="#" class="cta-button">Book Your Event Coverage</a>
+      <p>Email us at: <a href="/cdn-cgi/l/email-protection#b092969f9b9cf094999799849f9c9c91de939f9d"><spanEvenCoverage@digitolla.com</span></a></p>
+    </section>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'936017e8dd4f6745',t:'MTc0NTYwNzczMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
