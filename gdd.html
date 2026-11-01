@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
   <meta name="keywords" content="graphic design, creative designs, branding, Digitolla" />
-  <meta name="description" content="Digitolla offers creative graphic designs for print, digital, and more, crafted to leave a lasting impression." />
+  <meta name="description" content="Graphic design in Srinagar — logos, brand identities and creatives by Digitolla that make your business look established from day one." />
   <meta name="author" content="Digitolla" />
-
-  <title>Digitolla - Graphic Design</title>
+  <title>Graphic Design & Branding in Srinagar | Digitolla</title>
 
   <!-- Owl Carousel stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -20,30 +16,34 @@
   <!-- Fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
 
-  <!-- Custom styles -->
+  <!-- Inline CSS -->
   <style>
     /* Reset and Base Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      color: #0c0c0c;
+      background-color: #F0EAD6;
       line-height: 1.6;
-      color: #333;
+      overflow-x: hidden;
     }
 
+    /* Hero Area */
     .hero_area {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      position: relative;
+      background-color: #F0EAD6;
+      background-size: cover;
+      background-position: bottom;
     }
 
     /* Header Section */
     .header_section {
-      background: #F0EAD6 ;
+      background: #F0EAD6;
       padding: 0.5rem 1rem;
     }
 
@@ -57,11 +57,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      z-index: 99999;
     }
 
-    .navbar-brand span {
-      display: block;
-      animation: fadeIn 1s ease;
+    .navbar-brand {
+      margin-left: 25px;
     }
 
     .navbar-brand img {
@@ -69,44 +69,13 @@
       width: 90px;
     }
 
-    .navbar-toggler {
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
-
-    .navbar-toggler span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: #046307  ;
-      margin: 5px 0;
-      transition: all 0.3s;
-    }
-
-    .collapse.navbar-collapse {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background: #F0EAD6;
-    }
-
-    .collapse.navbar-collapse.show {
-      display: flex;
-    }
-
-    .d-flex {
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1rem 0;
-    }
-
     .navbar-nav {
       list-style: none;
       display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+      flex-direction: row;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
     }
 
     .nav-item {
@@ -116,66 +85,100 @@
     }
 
     .nav-item .nav-link {
-      color: #046307 ;
+      padding: 3px 15px;
+      margin: -6px 49px;
+      color: #1b513b;
       font-size: 1rem;
       text-decoration: none;
-      padding: 0.5rem;
+      text-align: center;
+      border-radius: 20px;
+      transition: color 0.3s ease;
     }
 
     .nav-item .nav-link:hover {
-      color: #ffeb3b;
+      color: #d4a017;
+    }
+
+    .nav-item.active .nav-link {
+      color: #d4a017;
     }
 
     .quote_btn-container a {
-      color: #fff;
+      color: #1b513b;
       font-size: 0.9rem;
       text-decoration: none;
       animation: fadeIn 1s ease;
     }
 
+    .quote_btn-container a:hover {
+      color: #d4a017;
+    }
+
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 2rem 1rem;
-      background: #f4f4f4;
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #1b513b 0%, #165520 50%, #F0EAD6 100%);
+      color: #F0EAD6;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(240, 234, 214, 0.2), transparent);
+      opacity: 0.5;
+      animation: pulse 10s infinite;
     }
 
     .hero h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #046307;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 0.8s ease forwards;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      animation: bounceIn 1.2s ease-out;
     }
 
     .hero p {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 0.8s ease forwards;
-      animation-delay: 0.2s;
+      font-size: 1.6rem;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeInUp 1.2s ease-out 0.3s;
+      animation-fill-mode: backwards;
     }
 
-    /* Portfolio (Our Work) Section */
+    /* Portfolio Section */
     .portfolio {
-      padding: 2rem 1rem;
+      padding: 40px 15px;
       text-align: center;
-      background: #fff;
+      background: #F0EAD6;
     }
 
     .portfolio h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      color: #046307;
-      opacity: 0;
+      font-size: 2.2rem;
+      color: #1b513b;
+      margin-bottom: 30px;
+      position: relative;
       animation: fadeIn 0.8s ease forwards;
     }
 
+    .portfolio h2::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #1b513b;
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .slider {
-      max-width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
       overflow: hidden;
     }
 
@@ -186,15 +189,14 @@
     .owl-carousel .slide {
       position: relative;
       overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
     }
 
     .owl-carousel .slide img {
       width: 100%;
-      height: auto;
+      height: 500px;
       object-fit: cover;
-      max-height: 200px;
       display: block;
       transition: transform 0.5s ease;
     }
@@ -203,216 +205,189 @@
       transform: scale(1.1);
     }
 
-    /* Slide Entrance Animation */
     .owl-carousel .owl-item .slide {
       opacity: 0;
       transform: translateY(20px);
       animation: slideIn 0.5s ease forwards;
     }
 
-    @keyframes slideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* Services Section */
+    .services {
+      padding: 40px 15px;
+      text-align: center;
+      background: linear-gradient(135deg, #F0EAD6, #165520, #1b513b);
+      color: #F0EAD6;
+      position: relative;
+      overflow: hidden;
     }
 
-    /* Hover Overlay Effect */
-    .owl-carousel .slide::after {
+    .services::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(4, 99, 7, 0.5);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .owl-carousel .slide:hover::after {
-      opacity: 1;
-    }
-
-    /* Services (What We Offer) Section */
-    .services {
-      padding: 2rem 1rem;
-      text-align: center;
-      background: linear-gradient(135deg, #046307 0%, #1a3c1e 100%);
+      background: radial-gradient(circle, rgba(240, 234, 214, 0.15), transparent);
+      opacity: 0.3;
+      animation: pulse 12s infinite;
     }
 
     .services h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #ffeb3b;
-      margin-bottom: 2rem;
+      font-size: 2.8rem;
+      margin-bottom: 50px;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      animation: pulseGlow 1s ease forwards;
-    }
-
-    .services ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .services li {
-      background: linear-gradient(145deg, #ffffff, #e6e6e6);
-      padding: 1rem;
-      border-radius: 12px;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #046307;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(255, 235, 59, 0.2);
+      animation: bounceIn 1.2s ease-out;
       position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: bounceUpDown 2s ease-in-out infinite;
-      animation-delay: calc(var(--i) * 0.2s);
-    }
-
-    .services li:hover,
-    .services li:active {
-      transform: scale(1.1) rotate(2deg);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 235, 59, 0.8);
-      border: 2px solid #ffeb3b;
       z-index: 1;
     }
 
-    /* Overlay Glow Effect */
+    .services ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px;
+      list-style: none;
+    }
+
+    .services li {
+      background: rgba(27, 81, 59, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #F0EAD6;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: floatBounce 3s ease-in-out infinite;
+      animation-delay: calc(var(--i) * 0.2s);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(5px);
+    }
+
+    .services li:hover {
+      transform: translateY(-15px) scale(1.08);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
     .services li::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 235, 59, 0.4), transparent);
-      transition: left 0.5s ease;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(240, 234, 214, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
     }
 
-    .services li:hover::before,
-    .services li:active::before {
-      left: 100%;
-    }
-
-    @keyframes bounceUpDown {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    @keyframes pulseGlow {
-      0% {
-        opacity: 0;
-        text-shadow: 0 0 0 rgba(255, 235, 59, 0);
-      }
-      100% {
-        opacity: 1;
-        text-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
-      }
+    .services li:hover::before {
+      opacity: 0.4;
     }
 
     /* Why Choose Section */
     .why-choose {
-      padding: 2rem 1rem;
+      padding: 80px 20px;
       text-align: center;
-      background: #fff;
+      background: #F0EAD6;
     }
 
     .why-choose h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #046307;
-      opacity: 0;
-      transform: scale(0.8);
-      animation: scaleIn 0.8s ease forwards;
+      font-size: 2.5rem;
+      color: #1b513b;
+      margin-bottom: 20px;
+      animation: slideInLeft 1.2s ease-out;
     }
 
     .why-choose p {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      opacity: 0;
-      transform: scale(0.8);
-      animation: scaleIn 0.8s ease forwards;
-      animation-delay: 0.2s;
-    }
-
-    @keyframes scaleIn {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      font-size: 1.1rem;
+      margin: 0 auto;
+      max-width: 800px;
+      animation: fadeIn 1.2s ease-out 0.3s;
+      animation-fill-mode: backwards;
     }
 
     /* Contact Section */
     .contact {
-      padding: 2rem 1rem;
+      padding: 40px 15px;
       text-align: center;
-      background: #f4f4f4;
+      background: #F0EAD6;
     }
 
     .contact .cta-button {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #046307;
-      color: #fff;
+      padding: 10px 35px;
+      background-color: #d4a017;
+      color: #F0EAD6;
       text-decoration: none;
-      border-radius: 5px;
-      font-size: 1rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
       animation: pulse 2s infinite;
     }
 
     .contact .cta-button:hover {
-      background: #ffeb3b;
-      color: #046307;
+      background-color: #d4a017;
     }
 
     .contact p {
-      font-size: 0.9rem;
-      margin-top: 1rem;
-      opacity: 0;
+      font-size: 0.95rem;
+      margin-top: 20px;
       animation: fadeIn 0.8s ease forwards;
     }
 
     .contact a {
-      color: #046307;
+      color: #1b513b;
       text-decoration: none;
     }
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-      }
+    .contact a:hover {
+      color: #d4a017;
     }
 
+    /* Animations */
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Mobile Responsiveness */
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: scale(0.3); }
+      50% { opacity: 1; transform: scale(1.05); }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes floatBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes slideIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
     @media (min-width: 481px) {
       .header_section {
         padding: 1rem;
@@ -423,22 +398,104 @@
         width: 117px;
       }
 
-      .collapse.navbar-collapse {
-        flex-direction: row;
-        justify-content: space-between;
+      .hero h1 {
+        font-size: 2.5rem;
       }
 
-      .d-flex {
-        flex-direction: row;
-        gap: 1rem;
+      .hero p {
+        font-size: 1.3rem;
+      }
+
+      .portfolio h2 {
+        font-size: 1.8rem;
+      }
+
+      .services h2 {
+        font-size: 2rem;
+      }
+
+      .services ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-choose h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero p {
+        font-size: 1.6rem;
+      }
+
+      .portfolio h2 {
+        font-size: 2.2rem;
+      }
+
+      .services h2 {
+        font-size: 2.8rem;
+      }
+
+      .services ul {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .why-choose h2 {
+        font-size: 2.5rem;
+      }
+
+      .contact .cta-button {
+        font-size: 1.1rem;
+        padding: 10px 35px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+      }
+
+      .portfolio h2 {
+        font-size: 1.8rem;
+      }
+
+      .services h2 {
+        font-size: 2rem;
+      }
+
+      .services ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-choose h2 {
+        font-size: 2rem;
       }
 
       .navbar-nav {
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
       }
 
+      .nav-item .nav-link {
+        margin: 5px 10px;
+        padding: 2px 10px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .hero p {
@@ -446,57 +503,58 @@
       }
 
       .portfolio h2 {
-        font-size: 1.8rem;
-      }
-
-      .owl-carousel .slide img {
-        max-height: 250px;
-      }
-
-      .services ul {
-        grid-template-columns: repeat(2, 1fr);
+        font-size: 1.6rem;
       }
 
       .services h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+      }
+
+      .services ul {
+        grid-template-columns: 1fr;
       }
 
       .why-choose h2 {
         font-size: 1.8rem;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .portfolio h2 {
-        font-size: 2rem;
-      }
-
-      .owl-carousel .slide img {
-        max-height: 300px;
-      }
-
-      .services ul {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .services h2 {
-        font-size: 2.2rem;
-      }
-
-      .why-choose h2 {
-        font-size: 2rem;
       }
 
       .contact .cta-button {
-        font-size: 1.1rem;
-        padding: 1rem 2rem;
+        font-size: 1rem;
+        padding: 8px 25px;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .nav-item .nav-link {
+        margin: 5px 0;
+        padding: 2px 8px;
+        font-size: 0.85rem;
+      }
+
+      .navbar-brand img {
+        height: 60px;
+        width: 67px;
       }
     }
   </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://digitolla.com/gdd.html">
+  <meta name="theme-color" content="#1b513b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Digitolla">
+  <meta property="og:title" content="Graphic Design & Branding in Srinagar | Digitolla">
+  <meta property="og:description" content="Graphic design in Srinagar — logos, brand identities and creatives by Digitolla that make your business look established from day one.">
+  <meta property="og:url" content="https://digitolla.com/gdd.html">
+  <meta property="og:image" content="https://digitolla.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Graphic Design & Branding in Srinagar | Digitolla">
+  <meta name="twitter:description" content="Graphic design in Srinagar — logos, brand identities and creatives by Digitolla that make your business look established from day one.">
+  <meta name="twitter:image" content="https://digitolla.com/og-image.jpg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 
 <body>
@@ -504,31 +562,34 @@
     <!-- Header Section -->
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
+        <nav class="custom_nav-container">
           <a class="navbar-brand" href="index.html">
-            <span style="color: #046307;">
-              <img src="logoo.png" alt="Digitolla Logo" style="height: 80px; width: 90px;">
+            <span>
+              <img src="logoo.png" alt="Digitolla Logo" style="height: 104px; width: 117px;">
             </span>
           </a>
-          <button class="navbar-toggler" type="button" onclick="toggleNav()">
-            <span class="s-1"></span>
-            <span class="s-2"></span>
-            <span class="s-3"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav">
-                <li class="nav-item" style="--i: 1;">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item" style="--i: 2;">
-                  <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item active" style="--i: 3;">
-                  <a class="nav-link" href="service.html">Services</a>
-                </li>
-              </ul>
+          <div class="d-flex align-items-center">
+            <ul class="navbar-nav">
+              <li class="nav-item" style="--i: 1;">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item" style="--i: 2;">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item" style="--i: 2.5;">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item active" style="--i: 3;">
+                <a class="nav-link" href="service.html" style="color: #1b513b;">Services </a>
+              </li>
+              <li class="nav-item" style="--i: 4;">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <div class="quote_btn-container">
+              <a href="tel:+916006495703">
+                <!-- <span>Call: +91 60064 95703</span> -->
+              </a>
             </div>
           </div>
         </nav>
@@ -608,21 +669,14 @@
 
     <!-- Contact Section -->
     <section class="contact">
-      <a href="#" class="cta-button">Design Something Amazing</a>
-      <p>Email us at: <a href="mailto:admin@digitolla.com">admin@digitolla.com</a></p>
-    </section>
+      <a href="contact.html" class="cta-button">Design Something Amazing</a>
+      <p>Email us at: <a href="mailto:contact@digitolla.com">contact@digitolla.com</a></p>
   </div>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script>
-    // Toggle Navigation for Mobile
-    function toggleNav() {
-      const nav = document.getElementById('navbarSupportedContent');
-      nav.classList.toggle('show');
-    }
-
     // Initialize Owl Carousel for Our Work
     $(document).ready(function(){
       $('.owl-carousel').owlCarousel({
@@ -633,18 +687,13 @@
         autoplay: true,
         autoplayTimeout: 3000,
         responsive: {
-          0: {
-            items: 1
-          },
-          481: {
-            items: 2
-          },
-          769: {
-            items: 3
-          }
+          0: { items: 1 },
+          481: { items: 2 },
+          769: { items: 3 }
         }
       });
     });
   </script>
+<a class="wa-float" href="https://wa.me/916006495703?text=Hi%20Digitolla!%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Digitolla on WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#F0EAD6" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 </body>
 </html>

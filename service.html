@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <!-- Basic -->
@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
   <meta name="keywords" content="" />
-  <meta name="description" content="" />
+  <meta name="description" content="Explore Digitolla's services in Srinagar — social media management, event coverage, content creation, branding, SEO, video editing & website development." />
   <meta name="author" content="" />
 
-  <title>Digitolla</title>
+  <title>Our Services — Social Media, Events, Content & Branding | Digitolla Srinagar</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
@@ -27,11 +27,104 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+<style>
+  .footer {
+    background-color: #1b513b;
+    color: #F0EAD6;
+    padding: 25px 20px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-social a {
+    background-color: #F0EAD6;
+    color: #1b513b;
+    font-size: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-social a:hover {
+    background-color: #1b513b;
+    color: #F0EAD6;
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  .footer-text {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .footer-text a {
+    color: #F0EAD6;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+
+  .footer-text a:hover {
+    color: #dcdcdc;
+  }
+
+  @media (min-width: 768px) {
+    .footer-container {
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+    }
+
+    .footer-social {
+      justify-content: flex-start;
+    }
+
+    .footer-text {
+      text-align: right;
+    }
+  }
+</style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://digitolla.com/service.html">
+  <meta name="theme-color" content="#1b513b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Digitolla">
+  <meta property="og:title" content="Our Services — Social Media, Events, Content & Branding | Digitolla Srinagar">
+  <meta property="og:description" content="Explore Digitolla's services in Srinagar — social media management, event coverage, content creation, branding, SEO, video editing & website development.">
+  <meta property="og:url" content="https://digitolla.com/service.html">
+  <meta property="og:image" content="https://digitolla.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Services — Social Media, Events, Content & Branding | Digitolla Srinagar">
+  <meta name="twitter:description" content="Explore Digitolla's services in Srinagar — social media management, event coverage, content creation, branding, SEO, video editing & website development.">
+  <meta name="twitter:image" content="https://digitolla.com/og-image.jpg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 
 <body class="sub_page">
   <div class="loader" id="loader">
-    <h1 class="brand-name">Digitolla</h1>
+    <div class="brand-name">Digitolla</div>
     <div class="loading-bar"></div>
   </div>
 
@@ -41,8 +134,8 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <span style="color: #046307 ;">
-              <img src="logoo.png" alt="" style="height: 104px;width: 117px;">
+            <span style="color: #1b513b ;">
+              <img src="logoo.png" alt="Digitolla" style="height: 104px;width: 117px;">
             </span>
           </a>
           </a>
@@ -61,6 +154,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="team.html"> Team</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="service.html"> Services </a>
@@ -104,6 +200,11 @@
             <div class="service-icon" id="smm">📱</div>
             <h3 class="service-title"><a href="smm.html">Social Media Management</a> </h3>
             <p class="service-description">Strategize and manage your social media presence for maximum engagement.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🔍</div>
+            <h3 class="service-title"><a href="seo.html">SEO</a> </h3>
+            <p class="service-description">Rank higher on Google and get found by customers searching for you.</p>
           </div>
           <div class="service-card">
             <div class="service-icon">✂️</div>
@@ -155,7 +256,7 @@
      
 
        <!-- footer section -->
-  <section class="container-fluid footer_section" style="position: absolute;">
+  <section class="container-fluid footer_section">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Google Fonts -->
@@ -172,76 +273,76 @@
             <div class="floating-box">
               <h3>Waqar Khan</h3>
               <p>Social media Management</p>
-              <img src="worked/1.jpeg" alt="Ali Razvi" />
+              <img loading="lazy" src="worked/1.jpeg" alt="Waqar Khan" />
             </div>
             <!-- Box 2 -->
             <div class="floating-box">
               <h3>Umer world</h3>
               <p>Social media Management</p>
-              <img src="worked/2.jpeg" alt="Waqar Khan" />
+              <img loading="lazy" src="worked/2.jpeg" alt="Umer world" />
             </div>
             <!-- Box 3 -->
             <div class="floating-box">
               <h3>DJ Zaid</h3>
               <p>Social media Management</p>
-              <img src="worked/3.jpeg" alt="Aayan Khan" />
+              <img loading="lazy" src="worked/3.jpeg" alt="DJ Zaid" />
             </div>
             <!-- Box 4 -->
             <div class="floating-box">
               <h3>Aaqif Qamarwari</h3>
               <p>Social media Management</p>
-              <img src="worked/4.jpeg" alt="Future Prop-tech Summit" />
+              <img loading="lazy" src="worked/4.jpeg" alt="Aaqif Qamarwari" />
             </div>
             <!-- Box 5 -->
             <div class="floating-box">
               <h3>Mubbi’s Tattoo</h3>
               <p>Social media Management</p>
-              <img src="worked/5.jpeg" alt="London EV Show" />
+              <img loading="lazy" src="worked/5.jpeg" alt="Mubbi’s Tattoo" />
             </div>
             <div class="floating-box">
               <h3>Imtiyaz Maqbool</h3>
               <p>Social media Management</p>
-              <img src="worked/12.jpeg" alt="London EV Show" />
+              <img loading="lazy" src="worked/12.jpeg" alt="Imtiyaz Maqbool" />
             </div>
             <div class="floating-box">
               <h3>Future PropTech Summit</h3>
-              <img src="worked/14.jpeg" alt="London EV Show" />
+              <img loading="lazy" src="worked/14.jpeg" alt="Future PropTech Summit" />
             </div>
             <!-- Box 6 -->
             <div class="floating-box">
               <h3>Nadiya Nighat</h3>
               <p>Social media Management</p>
-              <img src="worked/6.jpeg" alt="Illumina Genomics Forum" />
+              <img loading="lazy" src="worked/6.jpeg" alt="Nadiya Nighat" />
             </div>
             <!-- Box 7 -->
             <div class="floating-box">
               <h3>Fitness First Magam</h3>
               <p>Social media Marketing</p>
-              <img src="worked/7.jpeg" alt="DJ Zaid" />
+              <img loading="lazy" src="worked/7.jpeg" alt="Fitness First Magam" />
             </div>
             <!-- Box 8 -->
             <div class="floating-box">
               <h3>Filli Cafe Magam</h3>
               <p>Social media Marketing</p>
-              <img src="worked/8.jpeg" alt="Umer World" />
+              <img loading="lazy" src="worked/8.jpeg" alt="Filli Cafe Magam" />
             </div>
             <!-- Box 9 -->
             <div class="floating-box">
               <h3>Aayan Khan</h3>
               <p>Social media Management</p>
-              <img src="worked/9.jpeg" alt="Aaqif Qamarwari" />
+              <img loading="lazy" src="worked/9.jpeg" alt="Aayan Khan" />
             </div>
 
             <div class="floating-box">
               <h3>London EV Show</h3>
               <p>Event Coverage </p>
-              <img src="worked/10.jpeg" alt="Aaqif Qamarwari" />
+              <img loading="lazy" src="worked/10.jpeg" alt="London EV Show" />
             </div>
 
             <div class="floating-box">
               <h3>Illumina Genomics Forum</h3>
               <p>Graphic Design</p>
-              <img src="worked/11.jpeg" alt="Aaqif Qamarwari" />
+              <img loading="lazy" src="worked/11.jpeg" alt="Illumina Genomics Forum" />
             </div>
           </div>
         </div>
@@ -251,7 +352,7 @@
       <div class="footer-container">
         <!-- Social Icons -->
         <div class="footer-social">
-          <a href="mailto:admin@digitolla.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:contact@digitolla.com" title="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://www.instagram.com/digitolla?igsh=dDN1aHZjb3E1bTlt" target="_blank" title="Instagram"><i
               class="fab fa-instagram"></i></a>
           <a href="https://www.facebook.com/share/1YfeAsA2qi/?mibextid=wwXIfr" title="Facebook"><i
@@ -263,7 +364,7 @@
 
         <!-- Footer Text -->
         <div class="footer-text">
-          <p style="color: #fff;">
+          <p style="color: #F0EAD6;">
             © 2025 • Crafted with ❤️ by
             <a href="https://www.instagram.com/digitolla/" target="_blank"><strong>Digitolla</strong></a>
             <!-- All Rights Reserved by -->
@@ -303,85 +404,7 @@
           }, 2000);
         });
       </script>
+<a class="wa-float" href="https://wa.me/916006495703?text=Hi%20Digitolla!%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Digitolla on WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#F0EAD6" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 </body>
 
 </html>
-<style>
-  .footer {
-    background-color: #1b513b;
-    color: white;
-    padding: 25px 20px;
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-  }
-
-  .footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-social {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .footer-social a {
-    background-color: white;
-    color: #228B22;
-    font-size: 18px;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .footer-social a:hover {
-    background-color: #1e7b1e;
-    color: white;
-    transform: scale(1.15) rotate(5deg);
-  }
-
-  .footer-text {
-    font-size: 0.95rem;
-    max-width: 100%;
-  }
-
-  .footer-text a {
-    color: white;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-  }
-
-  .footer-text a:hover {
-    color: #dcdcdc;
-  }
-
-  @media (min-width: 768px) {
-    .footer-container {
-      flex-direction: row;
-      align-items: center;
-      text-align: left;
-    }
-
-    .footer-social {
-      justify-content: flex-start;
-    }
-
-    .footer-text {
-      text-align: right;
-    }
-  }
-</style>

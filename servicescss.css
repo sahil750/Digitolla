@@ -15,7 +15,7 @@ body {
 .hero {
   text-align: center;
   padding: 100px 15px;
-  background: linear-gradient(135deg, #1b513b 0%, #1A3C34 50%, #F0EAD6 100%);
+  background: linear-gradient(135deg, #1b513b 0%, #165520 50%, #F0EAD6 100%);
   color: #F0EAD6;
   position: relative;
   overflow: hidden;
@@ -42,7 +42,7 @@ body {
   font-size: 2.8rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(to right, #F0EAD6, #D4A017);
+  background: linear-gradient(to right, #F0EAD6, #165520);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -67,7 +67,7 @@ body {
   font-size: 2.4rem;
   color: #F0EAD6;
   margin-bottom: 40px;
-  background: linear-gradient(to right, #F0EAD6, #D4A017);
+  background: linear-gradient(to right, #F0EAD6, #165520);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -131,7 +131,7 @@ body {
   color: #1b513b;
   text-align: center;
   margin-bottom: 40px;
-  background: linear-gradient(to right, #1b513b, #D4A017);
+  background: linear-gradient(to right, #1b513b, #165520);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -146,7 +146,7 @@ body {
 }
 
 .services li {
-  background: #fff;
+  background: #ffffff;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -172,7 +172,7 @@ body {
   padding: 60px 15px;
   max-width: 1200px;
   margin: 0 auto;
-  background: linear-gradient(to bottom, #F0EAD6, #E8E0C2);
+  background: linear-gradient(to bottom, #F0EAD6, #F0EAD6);
   text-align: center;
 }
 
@@ -180,7 +180,7 @@ body {
   font-size: 2.4rem;
   color: #1b513b;
   margin-bottom: 25px;
-  background: linear-gradient(to right, #1b513b, #D4A017);
+  background: linear-gradient(to right, #1b513b, #165520);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -217,7 +217,7 @@ body {
 }
 
 .cta-button:hover {
-  background: #B88B14;
+  background: #d4a017;
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
@@ -235,7 +235,7 @@ body {
 }
 
 .contact a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
