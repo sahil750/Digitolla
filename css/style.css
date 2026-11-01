@@ -175,7 +175,7 @@ a:hover::after {
   display: block;
   width: 35px;
   height: 4px;
-  background-color: #ffffff;
+  background-color: #1b513b;
   margin: 7px 0;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -552,8 +552,8 @@ a:hover::after {
   color: #F0EAD6;
   padding: 10px 15px;
   margin-bottom: 0;
-  opacity: 0;
-  height: 0;
+  opacity: 1;
+  height: auto;
   overflow: hidden;
   transition: opacity 0.3s ease, height 0.3s ease;
   background: rgba(27, 81, 59, 0.8);
@@ -567,7 +567,7 @@ a:hover::after {
 
 .service-card:hover .service-description {
   opacity: 1;
-  height: 80px;
+  height: auto;
 }
 
 .service-card:hover .service-title {
@@ -1240,7 +1240,7 @@ a:hover::after {
 .counter {
   font-weight: 600;
   display: inline-block;
-  min-width: 60px;
+  min-width: 1.2em;
 }
 
 .stars span {
